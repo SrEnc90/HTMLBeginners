@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8"> <!--! Codificación de caracteres -->
+        <meta name="viewport" content="width=device-width"> <!--! Con esto nos aseguramos que el ancho de la página se ajuste al ancho del dispositivo -->
+        <title>Portafolio midudev - Ingeniero de software con 15 años de experiencia</title>
+
+        <meta name="description" content="Portafolio de midudev, 15 años de experiencia como ingeniero de software"> <!--! Descripción de la página. A veces google la coloca en sus motor de búsqueda debajo del enlace(como una descripción) -->
+
+        <!--! OPEN GRAPH: Es un protocolo -->
+        <meta property="og:title" content="Portafolio de un ingeniero de software"> <!--! Título que se mostrará en las redes sociales, si no colocamos esta etiqueta por default iría la etiqueta title -->
+        <meta property="og:description" content="Portafolio de midudev, 15 años de experiencia como ingeniero de software"> <!--! Descripción que se mostrará en las redes sociales, si no colocamos esta etiqueta por default iría la etiqueta description -->
+        <meta property="og:image" content=""> <!--! Imagen que se mostrará en las redes sociales -->
+
+        <meta name="robots" content="index, follow"> <!--! Son metadatos que le dicen a los motores de búsqueda que indexen la página y sigan los enlaces que encuentren en ella. -->
+        <meta name="theme-color" content="#09f"> <!--! Cambia el color de la barra de navegación en dispositivos móviles -->
+
+        <link rel="icon" type="image/jpg" href="">
+    </head>
+
+    <body>
+        <header>
+            <h1>Portafolio de @midudev</h1>
+            
+            <nav>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#proyectos">Proyectos</a>
+                <a 
+                    href="https://twitch.tv/midudev"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >Twitch</a> <!--! rel="noreferrer noopener" es una medida de seguridad para evitar que el sitio al que se está redirigiendo tenga acceso a la página actual, cómo metadatos o los datos que provengan de la url(por ejemplo tokens, etc.). El noopener ya no es necesario colocar, los navegadores modernos lo implementan por defecto -->
+
+            </nav>
+        </header>
+
+        <main> <!--! La etiqueta main es una etiqueta especial, solo puede haber una en la página y es donde va el contenido principal de la página. -->
+            <p>+15 año de experiencia como <strong>Ingeniero de Software</strong>. Creador y divulgador de programación.</p>
+            
+            <h2>Experiencia</h2>
+            
+            <ul>
+                <li>Adevinta - 2022</li>
+                <li>Hubii - 2020</li>
+                <li>Nacencia</li>
+            </ul>
+
+            <!--! puedo colocar desde dónde quiero que comienze la lista ordenada y si quiero que sea descendente o ascendente, y si quiero que sea con números o letras -->
+            <aside>
+                <header>
+                    <h3>Mis tecnologías <span>favoritas</span></h3>
+                </header>
+                <ol type="A" reversed start="10">
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li value="5">Java</li>
+                    <li>C#</li>
+                </ol>
+            </aside>
+
+            <!--! No son necesarios las comillas en los atributos de las etiquetas a menos que tengan espacio, por ejemplo el width de mi etiqueta img está sin comillas. Ojo no es recomendable no colocar las comillas 
+            El lazy loading es una técnica que consiste en retrasar la carga de los elementos de una página web hasta que el usuario los necesita. Esto se puede aplicar a imágenes, iframes y scripts. Para aplicar lazy loading a una imagen, simplemente debes añadir el atributo loading="lazy" a la etiqueta img. No se debe aplicar en imágenes que están muy arriba (Qué se muestra la imagen nada más que al cargar la página)-->
+            <img
+                loading="lazy"
+                width=200 
+                height="200"
+                title="Foto de midudev" 
+                src="" 
+                alt="Una fotografía de Miguel Ángel Durán sonriendo y mirando a cámara con las manos cruzadas"
+            >
+            <!--! En este caso la etiqueta img tiene un atributo hidden, el cual es un atributo booleano, por lo que solo colocarlo se vuelve true así le ponga hidden="false" o hidden="abc", por lo que no es necesario colocarle un string, solo con ponerle hidden es suficiente. -->
+            
+            <img 
+                hidden="false"
+                src=""
+            >
+
+            <!--! Para que tenga el rol de botón, se debe colocar el atributo role="button" en la etiqueta que se quiera que tenga el rol de botón. No es lo recomendable porque ya existe un elemento para dicho rol, pero en ocasiones especiales lo podrías usar. -->
+            <div role="button">
+                Haz clic aquí
+            </div>
+
+            <section>
+                <h2>Preguntas Frecuentes</h2>
+                <details open>
+                    <summary>¿Qué estudios tienes?</summary>
+                    <p>Estudié en la universidad de vilanova una ingeniería de informática durante 5 años</p>
+                </details>
+
+                <details>
+                    <summary>¿Cuáles son tus hobbies?</summary>
+                    <p>Me encanta el deporte, sobre todo el fútbol y el baloncesto</p>
+                </details>
+
+                <details>
+                    <summary>¿Cuál es tu lenguaje de programación favorito?</summary>
+                    <p>JavaScript, me encanta la versatilidad que tiene</p>
+                </details>
+            </section>
+
+            <section>
+                <header>
+                    <h4>La página de tesla</h4>
+                    <!--! Para ver la relación de aspecto, tienes que irte a network dentro de devtools de google y buscar el recurso interesado y hacer clic y ver la opción de preview(en la parte de abajo de IDE aparece: 1533:811). Para ajustarlo usando el aspect-ratio. También se puede colocar el aspect rationg a los iframe que tienen videos de youtube la relación de aspecto universal de los videos de youtube es aspect-ratio: 16/9 -->
+                    <img style="width: 100%; aspect-ratio: 1533/811;" loading="lazy" src="/imgs/tesla.png" alt="captura de pantalla de la página web de tesla">
+                </header>
+            </section>
+
+            <!--! Nueva etiqueta en html -->
+            <dialog id="dialog">
+                <h1>¿Sabías que puedes abrir un modal así?</h1>
+                <p>¡Y es totalmente nativo!</p>
+                <button id="hide">cerrar modal</button>
+            </dialog>
+
+            <button id="show">Abrir Modal</button>
+            <!--! Se puede añadir etiquetas scripts en cualquier parte del HTML -->
+            <!--! Cada que añades un identificador a la etiqueta html(id) te crea una propiedad en el window con el nombre de esa id, con ello puedes acceder directamente al elemento: window.show.addEventListener. No se puede poner open al id=dialog, ni close, son palabras reservadas  -->
+            <script>
+                window.show.addEventListener('click', () => { 
+                    window.dialog.showModal();
+                });
+
+                window.hide.addEventListener('click', () => {
+                    window.dialog.close();
+                });
+            </script>
+
+            <section>
+                <h2>Formulario de contacto</h2>
+                <form action="post" action="/">
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                        <!--! No sabía que al hacer clic en el label te debe redireccionar al input.                        Existen dos formas de hacer lo mencionado -->
+                        <!-- 1era forma(Es con el for y el id) -->
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="name" id="name" placeholder="Miguel Ángel" required>
+                        <!-- 2da forma(lo he colocado dentro de un div para que haga salto de línea) -->
+                        <div>
+                            <label>
+                                Apellido:
+                                <input type="text" name="lastname" placeholder="Durán Encarnación">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Correo:
+                                <input type="email" name="email" placeholder="midudev@gmail.com">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información Adicional</legend>
+                        <label>
+                            teléfono:
+                            <input type="tel" name="phone" placeholder="953742749"
+                            pattern="[0-9]{9}">
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Otros</legend>
+                        <div>
+                            <datalist id="paises">
+                                <option value="México"></option>
+                                <option value="Perú"></option>
+                                <option value="Colombia"></option>
+                                <option value="Chile"></option>
+                                <option value="Argentina"></option>
+                            </datalist>
+                            <label>
+                                ¿De dónde eres?
+                                <input list="paises" name="paises">
+                            </label>
+                        </div>
+                    </fieldset>
+                    <!--! Los button dentro de un form por defecto son de tipo sugmit. A no ser que literlamente se especifíque lo contrario usando <button type="button">Enviar contacto</button> -->
+                    <button>Enviar contacto</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            Hecho con ❤️ por midudev
+
+            <!--! Anchors especiales -->
+            <a href="mailto:carlos.encarnacion@adexperu.org.pe">Envíame un correo</a>
+            <a href="tel:+51953742749">Llámame por teléfono</a>
+            <a href="whatsapp://send?text=Hola Midudev">Escríbeme al whatsapp</a>
+        </footer>
+        
+    </body>
+</html>    
